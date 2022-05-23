@@ -6,6 +6,7 @@ import "./index.css";
 import "vazirmatn/Vazirmatn-font-face.css";
 
 import App from "./components/App";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import reportWebVitals from "./reportWebVitals";
 import { Container } from "react-bootstrap";
@@ -13,9 +14,11 @@ import { Container } from "react-bootstrap";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <Container className="mt-2">
-            <App />
-        </Container>
+        <ErrorBoundary>
+            <Container className="mt-2">
+                <App />
+            </Container>
+        </ErrorBoundary>
     </React.StrictMode>
 );
 

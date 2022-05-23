@@ -16,7 +16,7 @@ export default function NewUser(props) {
     const submit = (e) => {
         e.preventDefault();
 
-        if (userName.trim() == "") {
+        if (userName.trim() === "") {
             alert("wrong name");
             return;
         }
